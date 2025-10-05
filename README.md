@@ -15,14 +15,18 @@ parabank-automation/
   tests/features/      # BDD feature files
   tests/steps/         # Step definitions
   package.json         # Dependencies
+  proof/               # Screen recording of test run
+  TestCases.xlsx       # Excel file with documented test cases
+  cucumber.js          # Cucumber configuration
+
 ```
 
 
-## 🛠️ Setup
+## Setup
 
 1. Clone the repository:
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/Shantanumishra11/incubyte-automation
 cd parabank-automation
 ```
 
@@ -30,11 +34,15 @@ cd parabank-automation
 ```bash
 npm install
 ```
-
-3. Run the tests:
+3. Install Playwright browsers if not already installed:
 ```bash
-npx cucumber-js --tags @register  #for registration flow
- npx cucumber-js --tags @login   #for login flow
+npx playwright install
+```
+
+4. Run the tests:
+```bash
+  npx cucumber-js --tags @register  #for registration flow
+  npx cucumber-js --tags @login     #for login flow
 ```
 
 This will:
@@ -42,9 +50,11 @@ This will:
 - Log in with that user.
 - Print the account balance to the console.
 
-## Technologies Used
-- [Playwright](https://playwright.dev/)
-- [Cucumber.js](https://github.com/cucumber/cucumber-js)
+## Technologies Used (with version)
+- Playwright -> Version 1.55.1
+- Cucumber.js -> 9.6.0
+- Node.js -> v24.9.0
+
 
 ## BDD + POM
 - **BDD**: Feature files describe scenarios in Gherkin.
